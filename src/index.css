@@ -18,15 +18,19 @@
 
 * { box-sizing: border-box; }
 
-body {
+html,
+body,
+#root {
+  min-height: 100%;
   margin: 0;
-  background: var(--bg);
-  color: var(--white-glow);
+  background: #020617;
+}
+
+body {
+  color: #eaf6ff;
   font-family: 'Segoe UI', system-ui, sans-serif;
   overflow-x: hidden;
 }
-
-#root { min-height: 100vh; }
 
 @keyframes scanline {
   0% { transform: translateY(-100%); }

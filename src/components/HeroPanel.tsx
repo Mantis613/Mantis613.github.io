@@ -14,6 +14,7 @@ export default function HeroPanel() {
       <p className="mb-3 text-sm text-[var(--cyan)]">{profileData.role}</p>
       <p className="mb-6 text-sm leading-relaxed text-[var(--muted)]">{profileData.description}</p>
       <div className="mb-6 flex flex-wrap gap-3">
+        <a href={profileData.githubUrl} className="btn-terminal" target="_blank" rel="noreferrer">GITHUB</a>
         <a href="#projects" className="btn-terminal">{'>_ VIEW PROJECTS'}</a>
         <a href="#contact" className="btn-terminal">CONTACT</a>
       </div>

@@ -21,6 +21,16 @@ npm run build
 npm run preview
 ```
 
+## GitHub Pages
+
+This is a Vite app. GitHub Pages must use **GitHub Actions** as the source.
+
+If the site shows a blank page, check:
+
+Settings → Pages → Build and deployment → Source → GitHub Actions
+
+Do not deploy from branch/root, because that serves the raw Vite `index.html` instead of the built `dist` output.
+
 ## Deployment
 
 1. Push to `main` manually
