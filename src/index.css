@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #020617;
+  --panel: rgba(8, 17, 34, 0.78);
+  --panel-strong: rgba(15, 23, 42, 0.92);
+  --border: rgba(56, 189, 248, 0.38);
+  --border-strong: rgba(47, 140, 255, 0.72);
+  --blue: #2F8CFF;
+  --cyan: #38BDF8;
+  --white-glow: #EAF6FF;
+  --muted: #94A3B8;
+  --violet: #7C3AED;
+  --red: #FF4D4D;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--white-glow);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+#root { min-height: 100vh; }
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes pulse-ring {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.4); opacity: 0; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes radar-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes grid-drift {
+  from { background-position: 0 0; }
+  to { background-position: 40px 40px; }
+}
+
+.cursor-blink::after {
+  content: '▋';
+  color: var(--cyan);
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(47, 140, 255, 0.6), 0 0 40px rgba(56, 189, 248, 0.3);
+}
+
+.btn-terminal {
+  border: 1px solid var(--border-strong);
+  background: rgba(47, 140, 255, 0.08);
+  color: var(--white-glow);
+  padding: 0.6rem 1.2rem;
+  font-family: ui-monospace, monospace;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+
+.btn-terminal:hover {
+  box-shadow: 0 0 20px rgba(47, 140, 255, 0.4);
+  background: rgba(47, 140, 255, 0.15);
+}
+
+.btn-terminal:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
