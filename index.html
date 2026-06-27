@@ -3,21 +3,233 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mantis613 — finance, data analysis and IT portfolio." />
+  <meta name="description" content="Mantis613 — Finance × Data × IT portfolio." />
   <title>Mantis613 | Portfolio Terminal</title>
   <link rel="icon" href="/favicon.svg" />
   <style>
-    :root{--bg:#020617;--border:rgba(56,189,248,.38);--blue:#2F8CFF;--cyan:#38BDF8;--white:#EAF6FF;--muted:#94A3B8;--violet:#7C3AED}*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--white);font-family:Inter,system-ui,sans-serif;overflow-x:hidden}body{background:radial-gradient(circle at 15% 10%,rgba(47,140,255,.22),transparent 30%),radial-gradient(circle at 85% 15%,rgba(56,189,248,.16),transparent 28%),radial-gradient(circle at 50% 90%,rgba(124,58,237,.14),transparent 35%),#020617}body:before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(56,189,248,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(56,189,248,.08) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.9),rgba(0,0,0,.25))}.page{position:relative;z-index:2;max-width:1540px;margin:0 auto;padding:22px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 18px;border:1px solid var(--border);background:rgba(2,6,23,.76);backdrop-filter:blur(18px);border-radius:18px;position:sticky;top:14px;z-index:10}.logo{font-family:ui-monospace,monospace;font-weight:800;letter-spacing:.08em;color:var(--white);text-shadow:0 0 18px rgba(47,140,255,.7)}.nav{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:flex-end;color:var(--muted);font-family:ui-monospace,monospace;font-size:12px}.nav a{color:var(--muted);text-decoration:none}.nav a:hover{color:var(--cyan)}.online{display:inline-flex;align-items:center;gap:7px;color:var(--cyan)}.dot{width:8px;height:8px;border-radius:999px;background:var(--blue);box-shadow:0 0 18px var(--blue)}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;margin-top:22px}.card{border:1px solid var(--border);background:linear-gradient(135deg,rgba(8,17,34,.94),rgba(2,6,23,.78));border-radius:20px;box-shadow:0 0 42px rgba(47,140,255,.08);padding:22px;position:relative;overflow:hidden}.card:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(56,189,248,.08),transparent);transform:translateX(-100%);animation:shine 9s ease-in-out infinite}@keyframes shine{0%,65%{transform:translateX(-100%)}100%{transform:translateX(100%)}}.title{margin:0 0 16px;color:var(--cyan);font-family:ui-monospace,monospace;font-size:13px;letter-spacing:.09em;text-transform:uppercase}.hero{grid-column:span 4;min-height:380px;display:flex;flex-direction:column;justify-content:space-between}.snapshot{grid-column:span 8}.wide{grid-column:span 6}.third{grid-column:span 6}.seven{grid-column:span 7}.five{grid-column:span 5}.full{grid-column:span 12}.eyebrow{font-family:ui-monospace,monospace;color:var(--cyan);font-size:13px}h1{margin:20px 0 8px;font-size:clamp(38px,5vw,72px);line-height:.96;color:var(--white);text-shadow:0 0 18px rgba(47,140,255,.85)}.hero h2{margin:0;color:var(--cyan);font-family:ui-monospace,monospace;font-size:clamp(14px,2vw,18px)}p{color:var(--muted);line-height:1.65;margin:0 0 12px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}.btn{display:inline-flex;align-items:center;min-height:42px;padding:0 16px;border:1px solid rgba(47,140,255,.78);border-radius:10px;background:rgba(47,140,255,.1);color:var(--white);font-family:ui-monospace,monospace;font-weight:700;font-size:12px;text-decoration:none}.btn:hover{background:rgba(47,140,255,.18);box-shadow:0 0 28px rgba(47,140,255,.35)}.btn.secondary{border-color:rgba(148,163,184,.4);background:rgba(15,23,42,.65)}.status-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}.mini{border:1px solid rgba(56,189,248,.22);border-radius:12px;background:rgba(15,23,42,.62);padding:12px;font-family:ui-monospace,monospace;font-size:11px;color:var(--muted)}.mini strong{display:block;margin-top:4px;color:var(--cyan)}.terminal{border:1px solid rgba(56,189,248,.22);border-radius:16px;background:rgba(2,6,23,.85);padding:20px;font-family:ui-monospace,monospace;font-size:13px;line-height:1.9;color:var(--muted)}.terminal .k{color:var(--cyan)}.terminal .v{color:var(--white)}.value-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.value-item{border:1px solid rgba(56,189,248,.2);border-radius:14px;padding:16px;background:rgba(15,23,42,.52)}.value-item h3{margin:0 0 8px;color:var(--white);font-size:15px}.skill-row{margin-bottom:14px}.skill-head{display:flex;justify-content:space-between;font-family:ui-monospace,monospace;font-size:12px;margin-bottom:6px}.skill-head span{color:var(--muted)}.skill-head strong{color:var(--cyan);font-weight:600}.progress{height:8px;border-radius:999px;background:rgba(148,163,184,.14);overflow:hidden}.bar{height:100%;background:linear-gradient(90deg,var(--blue),var(--cyan));border-radius:inherit;box-shadow:0 0 12px rgba(56,189,248,.5)}.project{margin-bottom:12px;border:1px solid rgba(56,189,248,.2);border-radius:14px;padding:16px;background:rgba(15,23,42,.52)}.project h3{margin:0 0 8px;color:var(--white)}.project a{color:var(--cyan);font-family:ui-monospace,monospace;font-size:12px}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.chip{padding:7px 11px;border:1px solid rgba(56,189,248,.26);border-radius:999px;background:rgba(15,23,42,.72);color:var(--cyan);font-family:ui-monospace,monospace;font-size:11px}.roadmap{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.step{border:1px solid rgba(56,189,248,.2);border-radius:12px;padding:14px;background:rgba(15,23,42,.52);font-family:ui-monospace,monospace;font-size:12px}.step .num{color:var(--blue);font-weight:800;margin-bottom:6px;display:block}.step span{color:var(--white)}.contact-links{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0}.contact-links a{color:var(--cyan);font-family:ui-monospace,monospace;font-size:13px}footer{text-align:center;margin:22px 0 0;color:var(--muted);font-family:ui-monospace,monospace;font-size:12px}@media(max-width:1100px){.hero,.snapshot,.wide,.third,.seven,.five,.full{grid-column:span 12}.value-grid,.roadmap{grid-template-columns:1fr 1fr}}@media(max-width:720px){.page{padding:12px}.topbar{flex-direction:column;align-items:flex-start}.status-row,.value-grid,.roadmap{grid-template-columns:1fr}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}
+    :root {
+      --bg: #000000;
+      --bg-soft: #020617;
+      --panel: rgba(3, 7, 18, 0.92);
+      --panel-strong: rgba(8, 13, 28, 0.96);
+      --border: rgba(56, 189, 248, 0.36);
+      --border-strong: rgba(47, 140, 255, 0.78);
+      --blue: #2F8CFF;
+      --cyan: #38BDF8;
+      --white: #EAF6FF;
+      --muted: #94A3B8;
+      --violet: #7C3AED;
+      --red: #FF4D4D;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: #000000;
+      color: var(--white);
+      font-family: Inter, system-ui, sans-serif;
+      overflow-x: hidden;
+    }
+    body {
+      background:
+        radial-gradient(circle at 15% 10%, rgba(47, 140, 255, 0.16), transparent 30%),
+        radial-gradient(circle at 85% 15%, rgba(56, 189, 248, 0.12), transparent 28%),
+        radial-gradient(circle at 50% 90%, rgba(124, 58, 237, 0.10), transparent 35%),
+        #000000;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(56, 189, 248, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 189, 248, 0.07) 1px, transparent 1px);
+      background-size: 42px 42px;
+      animation: gridDrift 22s linear infinite;
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      width: 320px;
+      height: 320px;
+      top: 8%;
+      right: 6%;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(47, 140, 255, 0.18), transparent 70%);
+      filter: blur(40px);
+      pointer-events: none;
+      z-index: 0;
+      animation: orbFloat 20s ease-in-out infinite;
+    }
+    .orb {
+      position: fixed;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+      filter: blur(50px);
+    }
+    .orb-1 {
+      width: 280px;
+      height: 280px;
+      left: 5%;
+      bottom: 12%;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.14), transparent 70%);
+      animation: orbFloat 24s ease-in-out infinite reverse;
+    }
+    .orb-2 {
+      width: 200px;
+      height: 200px;
+      left: 45%;
+      top: 40%;
+      background: radial-gradient(circle, rgba(124, 58, 237, 0.12), transparent 70%);
+      animation: orbFloat 18s ease-in-out infinite;
+    }
+    @keyframes gridDrift {
+      from { background-position: 0 0; }
+      to { background-position: 42px 42px; }
+    }
+    @keyframes orbFloat {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(20px, -16px); }
+    }
+    @keyframes cardReveal {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes logoPulse {
+      0%, 100% { text-shadow: 0 0 12px rgba(47, 140, 255, 0.6), 0 0 24px rgba(56, 189, 248, 0.3); }
+      50% { text-shadow: 0 0 20px rgba(47, 140, 255, 0.9), 0 0 40px rgba(56, 189, 248, 0.5); }
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    @keyframes shine {
+      0%, 65% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+    .page { position: relative; z-index: 2; max-width: 1540px; margin: 0 auto; padding: 22px; }
+    .topbar {
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+      padding: 16px 18px; border: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.82); backdrop-filter: blur(18px);
+      border-radius: 18px; position: sticky; top: 14px; z-index: 10;
+    }
+    .logo {
+      font-family: ui-monospace, monospace; font-weight: 800; letter-spacing: 0.08em;
+      color: var(--white); animation: logoPulse 4s ease-in-out infinite;
+    }
+    .nav { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: flex-end; color: var(--muted); font-family: ui-monospace, monospace; font-size: 12px; }
+    .nav a { color: var(--muted); text-decoration: none; }
+    .nav a:hover { color: var(--cyan); }
+    .online { display: inline-flex; align-items: center; gap: 7px; color: var(--cyan); }
+    .dot { width: 8px; height: 8px; border-radius: 999px; background: var(--blue); box-shadow: 0 0 18px var(--blue); }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; margin-top: 22px; }
+    .card {
+      border: 1px solid var(--border);
+      background: linear-gradient(135deg, var(--panel), rgba(0, 0, 0, 0.88));
+      border-radius: 20px; padding: 22px; position: relative; overflow: hidden;
+      animation: cardReveal 0.7s ease forwards; opacity: 0; transform: translateY(18px);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .card:hover { transform: translateY(-4px); border-color: var(--border-strong); box-shadow: 0 0 32px rgba(47, 140, 255, 0.15); }
+    .card::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.06), transparent);
+      transform: translateX(-100%); animation: shine 9s ease-in-out infinite;
+    }
+    .card:nth-child(1) { animation-delay: 0.05s; }
+    .card:nth-child(2) { animation-delay: 0.12s; }
+    .card:nth-child(3) { animation-delay: 0.18s; }
+    .card:nth-child(4) { animation-delay: 0.24s; }
+    .card:nth-child(5) { animation-delay: 0.30s; }
+    .card:nth-child(6) { animation-delay: 0.36s; }
+    .card:nth-child(7) { animation-delay: 0.42s; }
+    .card:nth-child(8) { animation-delay: 0.48s; }
+    .card:nth-child(9) { animation-delay: 0.54s; }
+    .title { margin: 0 0 16px; color: var(--cyan); font-family: ui-monospace, monospace; font-size: 13px; letter-spacing: 0.09em; text-transform: uppercase; }
+    .subtitle { color: var(--muted); font-size: 13px; margin: -8px 0 16px; font-family: ui-monospace, monospace; }
+    .hero { grid-column: span 4; min-height: 380px; display: flex; flex-direction: column; justify-content: space-between; }
+    .snapshot { grid-column: span 8; }
+    .wide { grid-column: span 6; }
+    .third { grid-column: span 6; }
+    .seven { grid-column: span 7; }
+    .five { grid-column: span 5; }
+    .full { grid-column: span 12; }
+    .eyebrow { font-family: ui-monospace, monospace; color: var(--cyan); font-size: 13px; }
+    h1 { margin: 20px 0 8px; font-size: clamp(38px, 5vw, 72px); line-height: 0.96; color: var(--white); text-shadow: 0 0 18px rgba(47, 140, 255, 0.85); }
+    .hero h2 { margin: 0; color: var(--cyan); font-family: ui-monospace, monospace; font-size: clamp(14px, 2vw, 18px); }
+    .cursor-blink::after { content: "▋"; color: var(--cyan); animation: blink 1s step-end infinite; margin-left: 2px; }
+    p { color: var(--muted); line-height: 1.65; margin: 0 0 12px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+    .btn {
+      display: inline-flex; align-items: center; min-height: 42px; padding: 0 16px;
+      border: 1px solid rgba(47, 140, 255, 0.78); border-radius: 10px;
+      background: rgba(47, 140, 255, 0.1); color: var(--white);
+      font-family: ui-monospace, monospace; font-weight: 700; font-size: 12px; text-decoration: none;
+    }
+    .btn:hover { background: rgba(47, 140, 255, 0.18); box-shadow: 0 0 28px rgba(47, 140, 255, 0.35); }
+    .btn.secondary { border-color: rgba(148, 163, 184, 0.4); background: rgba(15, 23, 42, 0.65); }
+    .status-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 20px; }
+    .mini { border: 1px solid rgba(56, 189, 248, 0.22); border-radius: 12px; background: var(--panel-strong); padding: 12px; font-family: ui-monospace, monospace; font-size: 11px; color: var(--muted); }
+    .mini strong { display: block; margin-top: 4px; color: var(--cyan); }
+    .terminal { border: 1px solid rgba(56, 189, 248, 0.22); border-radius: 16px; background: rgba(0, 0, 0, 0.85); padding: 20px; font-family: ui-monospace, monospace; font-size: 13px; line-height: 1.9; color: var(--muted); }
+    .terminal .k { color: var(--cyan); }
+    .terminal .v { color: var(--white); }
+    .value-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .value-item { border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 14px; padding: 16px; background: var(--panel-strong); }
+    .value-item h3 { margin: 0 0 8px; color: var(--white); font-size: 15px; }
+    .skill-row { margin-bottom: 14px; }
+    .skill-head { display: flex; justify-content: space-between; font-family: ui-monospace, monospace; font-size: 12px; margin-bottom: 6px; }
+    .skill-head span { color: var(--muted); }
+    .skill-head strong { color: var(--cyan); font-weight: 600; }
+    .progress { height: 8px; border-radius: 999px; background: rgba(148, 163, 184, 0.14); overflow: hidden; }
+    .bar { height: 100%; background: linear-gradient(90deg, var(--blue), var(--cyan)); border-radius: inherit; box-shadow: 0 0 12px rgba(56, 189, 248, 0.5); }
+    .project { margin-bottom: 12px; border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 14px; padding: 16px; background: var(--panel-strong); }
+    .project h3 { margin: 0 0 8px; color: var(--white); }
+    .project a { color: var(--cyan); font-family: ui-monospace, monospace; font-size: 12px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .chip { padding: 7px 11px; border: 1px solid rgba(56, 189, 248, 0.26); border-radius: 999px; background: rgba(0, 0, 0, 0.6); color: var(--cyan); font-family: ui-monospace, monospace; font-size: 11px; }
+    .stack-group { margin-bottom: 14px; font-family: ui-monospace, monospace; font-size: 13px; }
+    .stack-group strong { color: var(--cyan); display: block; margin-bottom: 4px; }
+    .stack-group span { color: var(--muted); }
+    .roadmap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .step { border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 12px; padding: 14px; background: var(--panel-strong); font-family: ui-monospace, monospace; font-size: 12px; }
+    .step .num { color: var(--blue); font-weight: 800; margin-bottom: 6px; display: block; }
+    .step strong { color: var(--white); display: block; margin-bottom: 4px; }
+    .step span { color: var(--muted); line-height: 1.5; }
+    footer { text-align: center; margin: 22px 0 0; color: var(--muted); font-family: ui-monospace, monospace; font-size: 12px; }
+    @media (max-width: 1100px) {
+      .hero, .snapshot, .wide, .third, .seven, .five, .full { grid-column: span 12; }
+      .value-grid, .roadmap { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 720px) {
+      .page { padding: 12px; }
+      .topbar { flex-direction: column; align-items: flex-start; }
+      .status-row, .value-grid, .roadmap { grid-template-columns: 1fr; }
+      .card:hover { transform: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
   </style>
 </head>
 <body>
+  <div class="orb orb-1" aria-hidden="true"></div>
+  <div class="orb orb-2" aria-hidden="true"></div>
   <div class="page">
     <header class="topbar">
       <div class="logo">&gt;_ MANTIS613 TERMINAL</div>
       <nav class="nav" aria-label="Main navigation">
         <a href="#home">HOME</a>
         <a href="#profile">PROFILE</a>
-        <a href="#projects">PROJECTS</a>
+        <a href="#projects">WORK</a>
         <a href="#roadmap">ROADMAP</a>
         <a href="#contact">CONTACT</a>
         <a href="https://github.com/Mantis613">GITHUB</a>
@@ -29,8 +241,8 @@
         <div>
           <div class="eyebrow">&gt;_ INITIALIZING PROFILE...</div>
           <h1>Hi, I'm<br />Mantis613</h1>
-          <h2>Data Analyst • Finance Expert • Transitioning into IT</h2>
-          <p>I combine finance, analytics and modern development tools to build practical digital products, dashboards and automation workflows.</p>
+          <h2 class="cursor-blink">Finance × Data × IT</h2>
+          <p>I combine finance, data analysis and modern development tools to build practical digital products, dashboards and automation workflows.</p>
           <div class="actions">
             <a class="btn" href="https://github.com/Mantis613">GitHub Profile</a>
             <a class="btn secondary" href="https://t.me/Dmitry504">Telegram</a>
@@ -47,25 +259,22 @@
         <h2 class="title">&gt;_ PROFILE SNAPSHOT</h2>
         <div class="terminal">
           <div><span class="k">USER:</span> <span class="v">Mantis613</span></div>
-          <div><span class="k">ROLE:</span> <span class="v">Data Analyst / Finance Expert</span></div>
-          <div><span class="k">TRACK:</span> <span class="v">Frontend + Automation</span></div>
-          <div><span class="k">MODE:</span> <span class="v">Learning by building</span></div>
+          <div><span class="k">NAME:</span> <span class="v">Dmitry Khokhlov</span></div>
+          <div><span class="k">BACKGROUND:</span> <span class="v">Finance and data analysis</span></div>
+          <div><span class="k">TRACK:</span> <span class="v">Frontend, automation and AI-assisted development</span></div>
           <div><span class="k">LOCATION:</span> <span class="v">Moscow</span></div>
-          <br />
-          <div><span class="k">BACKGROUND:</span> Finance and data analysis</div>
-          <div><span class="k">CURRENT PATH:</span> Frontend, automation and AI-assisted development</div>
-          <div><span class="k">STRENGTH:</span> Business thinking + analytical mindset</div>
-          <div><span class="k">GOAL:</span> Build useful tools and grow into IT</div>
+          <div><span class="k">PORTFOLIO:</span> <span class="v">https://mantis613.github.io</span></div>
         </div>
+        <p style="margin-top:16px">A finance and data-focused professional building a bridge into IT through practical projects, portfolio work and AI-assisted development.</p>
       </section>
 
       <section class="card wide">
         <h2 class="title">&gt;_ VALUE MATRIX</h2>
         <div class="value-grid">
-          <div class="value-item"><h3>Financial analysis</h3><p>Understanding business metrics, reports, planning and numbers.</p></div>
-          <div class="value-item"><h3>Data thinking</h3><p>Turning raw information into structured insights.</p></div>
-          <div class="value-item"><h3>Product mindset</h3><p>Building not just screens, but useful workflows.</p></div>
-          <div class="value-item"><h3>AI-assisted execution</h3><p>Using Cursor, ChatGPT and automation tools to move faster.</p></div>
+          <div class="value-item"><h3>Financial Analysis</h3><p>Understanding business metrics, reports, planning and numbers.</p></div>
+          <div class="value-item"><h3>Data Thinking</h3><p>Turning raw information into structured insights.</p></div>
+          <div class="value-item"><h3>Product Mindset</h3><p>Building not just screens, but useful workflows.</p></div>
+          <div class="value-item"><h3>AI-Assisted Execution</h3><p>Using Cursor, ChatGPT and automation tools to move faster.</p></div>
         </div>
       </section>
 
@@ -75,53 +284,68 @@
         <div class="skill-row"><div class="skill-head"><span>Excel / spreadsheets</span><strong>Strong</strong></div><div class="progress"><div class="bar" style="width:80%"></div></div></div>
         <div class="skill-row"><div class="skill-head"><span>SQL basics</span><strong>Practicing</strong></div><div class="progress"><div class="bar" style="width:55%"></div></div></div>
         <div class="skill-row"><div class="skill-head"><span>Python basics</span><strong>Practicing</strong></div><div class="progress"><div class="bar" style="width:50%"></div></div></div>
-        <div class="skill-row"><div class="skill-head"><span>React learning</span><strong>Learning</strong></div><div class="progress"><div class="bar" style="width:40%"></div></div></div>
-        <div class="skill-row"><div class="skill-head"><span>TypeScript learning</span><strong>Learning</strong></div><div class="progress"><div class="bar" style="width:38%"></div></div></div>
+        <div class="skill-row"><div class="skill-head"><span>HTML / CSS</span><strong>Building</strong></div><div class="progress"><div class="bar" style="width:60%"></div></div></div>
+        <div class="skill-row"><div class="skill-head"><span>JavaScript / TypeScript</span><strong>Learning</strong></div><div class="progress"><div class="bar" style="width:40%"></div></div></div>
+        <div class="skill-row"><div class="skill-head"><span>React</span><strong>Learning</strong></div><div class="progress"><div class="bar" style="width:35%"></div></div></div>
         <div class="skill-row"><div class="skill-head"><span>GitHub / GitHub Pages</span><strong>Building</strong></div><div class="progress"><div class="bar" style="width:65%"></div></div></div>
-        <div class="skill-row"><div class="skill-head"><span>AI tools / Cursor</span><strong>Building</strong></div><div class="progress"><div class="bar" style="width:70%"></div></div></div>
+        <div class="skill-row"><div class="skill-head"><span>AI tools / Cursor</span><strong>Practicing</strong></div><div class="progress"><div class="bar" style="width:55%"></div></div></div>
       </section>
 
       <section id="roadmap" class="card third">
-        <h2 class="title">&gt;_ LEARNING ROADMAP</h2>
+        <h2 class="title">&gt;_ DEVELOPMENT ROADMAP</h2>
+        <p class="subtitle">Current track: Finance → Data → IT</p>
         <div class="roadmap">
-          <div class="step"><span class="num">01</span><span>HTML / CSS fundamentals</span></div>
-          <div class="step"><span class="num">02</span><span>JavaScript and TypeScript</span></div>
-          <div class="step"><span class="num">03</span><span>React and component architecture</span></div>
-          <div class="step"><span class="num">04</span><span>Python automation</span></div>
-          <div class="step"><span class="num">05</span><span>SQL and data workflows</span></div>
-          <div class="step"><span class="num">06</span><span>Real portfolio projects</span></div>
+          <div class="step"><span class="num">01</span><strong>Frontend foundation</strong><span>HTML, CSS, responsive layouts, terminal-style interfaces</span></div>
+          <div class="step"><span class="num">02</span><strong>JavaScript / TypeScript</strong><span>Logic, data structures, typed code, UI behavior</span></div>
+          <div class="step"><span class="num">03</span><strong>React ecosystem</strong><span>Components, state, routing, dashboard architecture</span></div>
+          <div class="step"><span class="num">04</span><strong>Data &amp; automation</strong><span>Python scripts, SQL queries, workflow automation</span></div>
+          <div class="step"><span class="num">05</span><strong>Portfolio projects</strong><span>Useful tools, dashboards, GitHub Pages, case studies</span></div>
+          <div class="step"><span class="num">06</span><strong>IT opportunities</strong><span>Junior / trainee roles, internships, freelance projects</span></div>
         </div>
       </section>
 
       <section id="projects" class="card seven">
-        <h2 class="title">&gt;_ FEATURED PROJECTS</h2>
+        <h2 class="title">&gt;_ FEATURED WORK</h2>
         <div class="project">
           <h3>Fintech Terminal Portfolio</h3>
-          <p>A personal GitHub Pages portfolio built as a futuristic terminal-style dashboard.</p>
-          <div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">GitHub Pages</span><span class="chip">GitHub Actions</span></div>
-          <p><a href="https://mantis613.github.io/">https://mantis613.github.io/</a></p>
+          <p>A personal GitHub Pages portfolio designed as a futuristic terminal-style dashboard.</p>
+          <p><strong>Stack:</strong> HTML · CSS · GitHub Pages · GitHub Actions</p>
+          <p><strong>Live:</strong> <a href="https://mantis613.github.io/">https://mantis613.github.io/</a></p>
+          <p><strong>Repository:</strong> <a href="https://github.com/Mantis613/Mantis613.github.io">https://github.com/Mantis613/Mantis613.github.io</a></p>
         </div>
         <div class="project">
           <h3>GitHub Profile README</h3>
-          <p>A professional GitHub profile page connected with the live portfolio.</p>
-          <div class="chips"><span class="chip">Markdown</span><span class="chip">GitHub</span><span class="chip">Badges</span></div>
-          <p><a href="https://github.com/Mantis613">https://github.com/Mantis613</a></p>
+          <p>A professional GitHub profile connected with the live portfolio.</p>
+          <p><strong>Stack:</strong> Markdown · GitHub · Portfolio presentation</p>
+          <p><strong>Profile:</strong> <a href="https://github.com/Mantis613">https://github.com/Mantis613</a></p>
+          <p><strong>Repository:</strong> <a href="https://github.com/Mantis613/Mantis613">https://github.com/Mantis613/Mantis613</a></p>
         </div>
         <div class="project">
           <h3>Automation Learning Lab</h3>
-          <p>A learning space for Python, AI-assisted workflows, scripts and productivity experiments.</p>
-          <div class="chips"><span class="chip">Python</span><span class="chip">AI tools</span><span class="chip">Cursor</span></div>
+          <p>A learning direction for Python, AI-assisted workflows, scripts and productivity experiments.</p>
+          <p><strong>Stack:</strong> Python · AI tools · Cursor</p>
         </div>
       </section>
 
-      <section id="contact" class="card five">
+      <section class="card five">
+        <h2 class="title">&gt;_ TECH STACK</h2>
+        <div class="stack-group"><strong>Finance &amp; Data:</strong><span>Excel · SQL · Analytics · Dashboards</span></div>
+        <div class="stack-group"><strong>Frontend:</strong><span>HTML · CSS · JavaScript · TypeScript · React</span></div>
+        <div class="stack-group"><strong>Tools:</strong><span>Git · GitHub · GitHub Actions · Cursor · ChatGPT</span></div>
+      </section>
+
+      <section id="contact" class="card full">
         <h2 class="title">&gt;_ COMMAND CENTER</h2>
-        <p>Open to collaboration, learning opportunities and IT-related projects.</p>
-        <div class="contact-links">
-          <a href="https://github.com/Mantis613">GitHub</a>
-          <a href="https://t.me/Dmitry504">Telegram</a>
-          <a href="https://mantis613.github.io/">Live Site</a>
+        <div class="terminal">
+          <div><span class="k">LIVE SITE:</span> <span class="v">https://mantis613.github.io/</span></div>
+          <div><span class="k">GITHUB:</span> <span class="v">https://github.com/Mantis613</span></div>
+          <div><span class="k">TELEGRAM:</span> <span class="v">https://t.me/Dmitry504</span></div>
+          <br />
+          <div><span class="k">STATUS:</span> <span class="v">Building portfolio</span></div>
+          <div><span class="k">FOCUS:</span> <span class="v">Finance × Data × IT</span></div>
+          <div><span class="k">TRACK:</span> <span class="v cursor-blink">Data Analyst → IT</span></div>
         </div>
+        <p style="margin-top:16px">Open to collaboration, learning opportunities and IT-related projects.</p>
       </section>
     </main>
     <footer>Built by Mantis613 • Finance × Data × IT • 2026</footer>
