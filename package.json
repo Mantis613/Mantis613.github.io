@@ -4,9 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "oxlint",
+    "dev": "vite --host 0.0.0.0",
+    "build": "node scripts/build.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
